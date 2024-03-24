@@ -1,0 +1,21 @@
+Exercice 04:
+
+1.
+Les objets sur lesquels la classe Jeu dépend et qui doivent être mockés incluent: le joueur, les dés et la banque.
+Car cette démarche permet d'isoler la méthode jouer et de tester son comportement de manière indépendante des
+implémentations réelles de ces objets. En utilisant des mock, nous pouvons contrôler le comportement de ces dépendances
+et vérifier comment la méthode jouer interagit avec elles.
+
+2. Les scénarios:
+Situation où le jeu est fermé
+Scénario où le joueur place une mise et la somme des dés n'est pas égale à 7
+Scénario où le joueur mise et la somme des dés est de 7
+Situation où le joueur n'a pas les fonds nécessaires pour placer sa mise
+Situation où la banque devient insolvable après un gain
+
+4. Le test de jeu fermé:
+Ce test est un test d'état, car il vérifie si le jeu est fermé après avoir appelé la méthode fermer().
+
+5.Test du cas où le joueur est insolvable
+Ce test est à la fois un test d'état et un test d'interaction. Il vérifie que le jeu se ferme lorsque le joueur est
+insolvable et qu'aucune interaction inattendue n'a lieu avec les dés.
