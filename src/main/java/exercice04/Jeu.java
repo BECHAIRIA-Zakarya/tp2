@@ -25,6 +25,7 @@ public class Jeu {
             int sommeDes = de1.lancer() + de2.lancer();
             if (sommeDes == 7) {
                 joueur.crediter(mise * 2);
+                banque.debiter(mise * 2);
                 if (!banque.est_solvable()) {
                     ouvert = false;
                     throw new JeuFermeException("La banque n'est plus solvable après un gain.");
